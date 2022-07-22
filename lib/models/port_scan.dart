@@ -7,9 +7,9 @@ class PortScan {
   final String state;
 
   const PortScan({
-    @required this.name,
-    @required this.port,
-    @required this.reason,
-    @required this.state,
+    required this.name,
+    required this.port,
+    required this.reason,
+    required this.state,
   });
 }

@@ -11,13 +11,13 @@ class Attacks {
   final String url;
 
   const Attacks({
-    @required this.id,
-    @required this.browser,
-    @required this.browserVersion,
-    @required this.date,
-    @required this.ip,
-    @required this.os,
-    @required this.post,
-    @required this.url
+    required this.id,
+    required this.browser,
+    required this.browserVersion,
+    required this.date,
+    required this.ip,
+    required this.os,
+    required this.post,
+    required this.url
   });
 }

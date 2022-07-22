@@ -3,7 +3,7 @@ class Auth {
   final String token;
   final String status;
 
-  Auth({this.server, this.token, this.status});
+  Auth({required this.server, required this.token, required this.status});
   factory Auth.fromJson(Map<String, dynamic> json) {
     return Auth(
       server: json['server'],

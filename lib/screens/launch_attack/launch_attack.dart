@@ -45,10 +45,10 @@ class _LaunchAttackState extends State<LaunchAttack> {
   bool _switchCustomHTML = false;
   bool _switchBeEF = false;
 
-  String serverFromSharedPreferences;
-  String tokenFromSharedPreferences;
+  late String serverFromSharedPreferences;
+  late String tokenFromSharedPreferences;
 
-  Map dataPostAttack;
+  late Map dataPostAttack;
 
   bool _validateFields() {
     setState(() {
@@ -116,28 +116,24 @@ class _LaunchAttackState extends State<LaunchAttack> {
                 focusNode: textFieldFocusNode,
                 textCapitalization: TextCapitalization.none,
                 style: TextStyle(fontSize: 18.0, color: Colors.black),
-                autovalidate: _autoValidate,
                 controller: clone,
                 keyboardType: TextInputType.url,
                 decoration: const InputDecoration(
                   suffixIcon: Icon(FontAwesomeIcons.clone),
                   labelText: '* Clone',
                 ),
-                validator: LaunchAttackValidate.validateClone,
               ),
             ),
             Container(
               child: TextFormField(
                 textCapitalization: TextCapitalization.none,
                 style: TextStyle(fontSize: 18.0, color: Colors.black),
-                autovalidate: _autoValidate,
                 controller: redirection,
                 keyboardType: TextInputType.url,
                 decoration: const InputDecoration(
                   suffixIcon: Icon(FontAwesomeIcons.sitemap),
                   labelText: "* Redirection",
                 ),
-                validator: LaunchAttackValidate.validateRedirection,
               ),
             ),
             Container(
@@ -202,7 +198,8 @@ class _LaunchAttackState extends State<LaunchAttack> {
 
                       }
 
-                      showDialog(context: context, child: Progress.progressLaunching);
+                    //  showDialog(context: context, builder: (BuildContext context) { });
+                    // showDialog(context: context, child: Progress.progressLaunching, builder: (BuildContext context) {  });
 
                       LaunchAttackService().sendRequestLaunchAttack(
                           serverFromSharedPreferences,

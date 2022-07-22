@@ -6,11 +6,11 @@ class Statistic {
   final String status;
 
   Statistic({
-    this.attacks,
-    this.clicks,
-    this.countCreds,
-    this.countNotPickedUp,
-    this.status
+    required this.attacks,
+    required this.clicks,
+    required this.countCreds,
+    required this.countNotPickedUp,
+    required this.status
   });
 
   factory Statistic.fromJson(Map<String, dynamic> json) {

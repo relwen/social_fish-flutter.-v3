@@ -9,14 +9,14 @@ class Trace {
   final String state;
 
   Trace({
-    this.IPv4,
-    this.city,
-    this.countryCode,
-    this.countryName,
-    this.latitude,
-    this.longitude,
-    this.postal,
-    this.state
+    required this.IPv4,
+    required this.city,
+    required this.countryCode,
+    required this.countryName,
+    required this.latitude,
+    required this.longitude,
+    required this.postal,
+    required this.state
   });
 
   factory Trace.fromJson(Map<String, dynamic> json) {
